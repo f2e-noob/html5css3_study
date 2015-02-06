@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" manifest="demo.appcache">
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/style.css" type="text/css" rel="stylesheet">
+		<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+		<style type="text/css">
+			#div1, #div2{float:left; width:100px; height:80px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+		</style>
+		<script type="text/javascript" src="js/works.js"></script>
+		<script type="text/javascript">
+			// function drag(event){
+			//  	event.dataTransfer.setData('text',event.target.id);
+			// }
+			// function allowDrop(event){
+			// 	event.preventDefault();
+			// }
+			// function drop(event){
+			// 	event.preventDefault();
+			// 	var data=event.dataTransfer.getData('text');
+			// 	event.target.appendChild(document.getElementById(data));
+			// }
+ 		</script>
+ 		<script type="text/javascript">
+		// 	var c=document.getElementById("myCanvas");
+		// 	var cxt=c.getContext("2d");
+		// 	cxt.fillStyle="#FF0000";
+		// 	cxt.fillRect(0,0,20,75);
+		// </script>
+	    <script type="text/javascript">
+	    // 	ssvar c=document.getElementById("myCanvas");
+		// 	var cxt=c.getContext("2d");
+		// 	cxt.moveTo(10,10);
+		// 	cxt.lineTo(150,50);
+		// 	cxt.lineTo(10,50);
+		// 	cxt.stroke();
+		// </script>
+	</head>
+	<body onresize="showMsg()">
+ 		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+ 			<img src="images/w3school_logo_black.gif" draggable="true" ondragstart="drag(event)" id="drag1">
+ 			<img src="images/w3school_logo_black.gif" draggable="true" ondragstart="drag(event)" id="drag2">
+ 		</div>
+ 		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+ 		<canvas id="myCanvas" width="200" height="100">
+			Your browser does not support the canvas element.
+		</canvas>
+				
+ 		<!-- <svg xmlns="http://www.w3.org/2000/svg">
+		  <polygon points="100,10 40,180 190,60 10,60 160,180" style="fill:lime; stroke:purple; stroke-width:5; fill-rule:evenodd;"/>
+		</svg> -->
+		// <script type="text/javascript">
+		// 	var x=document.getElementById('demo')
+		// 	function getLocation(){
+		// 		if(navigator.geoLocation){
+		// 			navigator.geolocation.getCurrentPosition(showPosition);
+		// 		}
+		// 	})
+		// </script>
+		<script type="text/javascript">
+			// if(localStorage.pagecount){
+			// 	localStorage.pagecount= Number(localStorage.pagecount) + 1
+			// }else{
+			// 	localStorage.pagecount = 1;
+			// }
+			// document.write("vister:" + localStorage.pagecount + "time(S)")
+			// sessionStorage.lastname="Mr xia";
+			// document.write(sessionStorage.lastname);
+			// if(sessionStorage.pagecount){
+			// 	sessionStorage.pagecount= Number(sessionStorage.pagecount) + 1
+			// }else{
+			// 	sessionStorage.pagecount = 1;
+			// }
+			// document.write("dsfa" + sessionStorage.pagecount + "S")
+			var w 
+			function startWorks(){
+				if(typeOf(Works)!=="undefined"){
+					if(typeOf(w) == "undefined"){\
+						w = new Works(js/works.js);
+					}
+					w.onmessage =function(event){
+						document.getElementById('result').innerHTML=event.data;
+					}
+				}else{
+					document.getElementById('result').innerHTML="sorry No .....!"
+				}
+			}
+			function stopWorks(){
+				w.terminate();
+			}
+		</script>
+		<p>计数：<span id="result"></p>
+		<button class="btn btn-danger btn-sm" onclick="startWorks">开始计数</button> <button class="btn btn-info btn-sm" onclick="stopWorks">停止计数</button>
+		Name: <input type="text" id="list" name="name">
+		Encryption: <keygen name="security">
+		<datelist id="list">
+			<option label="website" value="http://www.baidu.com"></option>
+		</datelist>
+		<input type="submit" value="提交">
+		<p>使用简易output计算机：</p>
+		<form action=""  onsubmit="return false">
+			<input type="text" id="value1"> +
+			<input type="text" id="value2"> =
+			<output id="result" onforminput="resCalc()"></output>
+		</form>
+		<script type="text/javascript">
+		 	function(){
+		 		numA = document.getElementById('value1').value;
+		 		numB = document.getElementById('value2').value;
+		 		document.getElementById('result').value = Number(numA)+ Number(numB);
+		 	}
+		</script>
+		<div class="container">
+			<form action="" methon="get" autocomplete="off">
+				Name:
+				<input type="text" name="name" autofocus="autofocus"/>		
+				Password:
+				<input type="text" name="password"/>		
+				<input type="submit" value="提交"/>		
+				<input type="range" name="points" min="1" max="10" autofocus='autofocus' />
+				<input type="url" list="url-list" name="link">
+				<datelist id="url-list">
+					<option label="w3school" value="http://www.baidu.ocm">
+					<option label="w3school" value="http://www.baidu.ocm">
+					<option label="w3school" value="http://www.baidu.ocm">
+				</datelist>	
+				<input type="submit" />	
+			</form><br><br>
+			<details>
+				<summary>Html5</summary>
+				fdsajfdksf;
+			</details>
+			<dialog open></dialog><br><br>
+			<div contenteditable="true">测试文字测试文字测试文字测试文字测试文字测试文字</div><br><br>
+			<div contextmenu="mymenu">
+				<menu id="mymenu" type="context">
+					<menuitem lable>dsaf</menuitem><menuitem lable>dsaf</menuitem><menuitem lable>dsaf</menuitem><menuitem lable>dsaf</menuitem>
+				</menu>
+			</div><br><br>
+			<div id="div1" ondrop="drop(event)" style="width:250px; height:100px; border:1px solid red;" ondragover="allowDrop(event)" ></div>
+			<div dropzone="copy|move|link" id="drop1" draggable="true" ondragstart="drag(event)">移动文字到框框之内</div>
+			<p>移动文字到框框之<strike>内移动</strike>文字到框框之内移动文字到框框之内</p>
+		</div>
+		<script type="text/javascript">
+			function showMsg(){
+				alert("窗口大小改变！")
+			}
+			function allowDrop(ev)
+			{
+			ev.preventDefault();
+			}
+
+			function drag(ev)
+			{
+			ev.dataTransfer.setData("Text",ev.target.id);
+			}
+
+			function drop(ev)
+			{
+			var data=ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+			ev.preventDefault();
+			}
+		</script>
+ 	</body>
+</html>
+ 
